@@ -91,8 +91,6 @@
 &trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans    &trans      &trans  &kp PIPE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN      &kp GREATER_THAN
 &trans        &trans           &trans        &trans                &trans    &trans      &trans  &trans                                                                          &trans
             >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
