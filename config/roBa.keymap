@@ -27,17 +27,97 @@
         compatible = "zmk,combos";
 
         mouse_left {
+            timeout-ms = <35>;
+            layers = <0>;
             bindings = <&kp J>;
             key-positions = <19 18>;
         };
 
         mouse_right {
+            timeout-ms = <35>;
+            layers = <0>;
             bindings = <&mkp MB2>;
             key-positions = <20 19>;
+        };
+
+        arrow_left_combo {
+            timeout-ms = <35>;
+            layers = <1>;
+            bindings = <&arrow_left>;
+            key-positions = <6 18>;
+        };
+
+        arrow_up_combo {
+            timeout-ms = <35>;
+            layers = <1>;
+            bindings = <&arrow_up>;
+            key-positions = <7 19>;
+        };
+
+        arrow_right_combo {
+            timeout-ms = <35>;
+            layers = <1>;
+            bindings = <&arrow_right>;
+            key-positions = <8 20>;
+        };
+
+        arrow_down_combo {
+            timeout-ms = <35>;
+            layers = <1>;
+            bindings = <&arrow_down>;
+            key-positions = <19 31>;
         };
     };
 
     macros {
+        arrow_left: arrow_left {
+            compatible = "zmk,behavior-macro";
+            label = "ARROW_LEFT";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp NUMBER_2 &kp NUMBER_1 &kp NUMBER_9 &kp NUMBER_0>,
+                <&macro_release &kp LALT>;
+        };
+
+        arrow_up: arrow_up {
+            compatible = "zmk,behavior-macro";
+            label = "ARROW_UP";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp NUMBER_2 &kp NUMBER_1 &kp NUMBER_9 &kp NUMBER_1>,
+                <&macro_release &kp LALT>;
+        };
+
+        arrow_right: arrow_right {
+            compatible = "zmk,behavior-macro";
+            label = "ARROW_RIGHT";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp NUMBER_2 &kp NUMBER_1 &kp NUMBER_9 &kp NUMBER_2>,
+                <&macro_release &kp LALT>;
+        };
+
+        arrow_down: arrow_down {
+            compatible = "zmk,behavior-macro";
+            label = "ARROW_DOWN";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LALT>,
+                <&macro_tap &kp NUMBER_2 &kp NUMBER_1 &kp NUMBER_9 &kp NUMBER_3>,
+                <&macro_release &kp LALT>;
+        };
+
         pair_parens: pair_parens {
             compatible = "zmk,behavior-macro";
             label = "PAIR_PARENS";
