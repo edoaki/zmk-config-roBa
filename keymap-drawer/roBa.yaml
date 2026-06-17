@@ -22,14 +22,14 @@ layers:
   - '&mkp MB1'
   - K
   - L
-  - ;
+  - '-'
   - Z
   - X
   - C
   - V
   - B
   - LCTRL
-  - LANG2
+  - ESC
   - N
   - M
   - ','
@@ -43,7 +43,7 @@ layers:
   - {t: F19, h: LSHIFT}
   - {t: BACKSPACE, h: NUM}
   - {t: ENTER, h: LEFT COMMAND}
-  - ESC
+  - ;
   SYMBOL:
   - {t: ▽, type: trans}
   - '&'
@@ -52,9 +52,9 @@ layers:
   - {t: ▽, type: trans}
   - '='
   - _
-  - ']'
   - '~'
   - '`'
+  - {t: ▽, type: trans}
   - '?'
   - $
   - '%'
@@ -140,7 +140,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&msc SCRL_UP'
+  - Meh+UP ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+Sft+TAB
@@ -151,9 +151,9 @@ layers:
   - MUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_RIGHT'
+  - Ctl+Alt+LEFT
+  - Alt+Ctl+/
+  - Ctl+Alt+RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -164,7 +164,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Alt+Ctl+C
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -179,5 +179,19 @@ layers:
 combos:
 - p: [19, 18]
   k: J
+  l: [default]
 - p: [20, 19]
   k: '&mkp MB2'
+  l: [default]
+- p: [6, 18]
+  k: '&arrow_left'
+  l: [SYMBOL]
+- p: [7, 19]
+  k: '&arrow_up'
+  l: [SYMBOL]
+- p: [8, 20]
+  k: '&arrow_right'
+  l: [SYMBOL]
+- p: [19, 31]
+  k: '&arrow_down'
+  l: [SYMBOL]
