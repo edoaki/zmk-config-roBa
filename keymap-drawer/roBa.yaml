@@ -185,13 +185,9 @@ combos:
   l: [default]
 - p: [6, 18]
   k: '&arrow_left'
-  l: [SYMBOL]
 - p: [7, 19]
   k: '&arrow_up'
-  l: [SYMBOL]
 - p: [8, 20]
   k: '&arrow_right'
-  l: [SYMBOL]
 - p: [19, 31]
   k: '&arrow_down'
-  l: [SYMBOL]
