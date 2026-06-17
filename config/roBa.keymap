@@ -10,20 +10,19 @@
 };
 
 &trackball {
-    automouse-layer = <4>;
-    scroll-layers = <5>;
+    scroll-layers = <3>;
 
-    // arrows {
-    //     layers = <3>;
-    //     bindings =
-    //         <&kp RIGHT_ARROW>,
-    //         <&kp LEFT_ARROW>,
-    //         <&kp UP_ARROW>,
-    //         <&kp DOWN_ARROW>;
-    //     tick = <10>;
-    //     wait-ms = <5>;
-    //     tap-ms = <5>;
-    // };
+    zoom {
+        layers = <1>;
+        bindings =
+            <&none>,
+            <&none>,
+            <&kp LG(PLUS)>,
+            <&kp LG(MINUS)>;
+        tick = <10>;
+        wait-ms = <30>;
+        tap-ms = <30>;
+    };
 };
 
 / {
@@ -42,11 +41,67 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
+        pair_parens: pair_parens {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_PARENS";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>, <&kp LEFT_ARROW>;
+        };
+
+        pair_brackets: pair_brackets {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_BRACKETS";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>, <&kp LEFT_ARROW>;
+        };
+
+        pair_braces: pair_braces {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_BRACES";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>, <&kp LEFT_ARROW>;
+        };
+
+        pair_angles: pair_angles {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_ANGLES";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>, <&kp LEFT_ARROW>;
+        };
+
+        pair_graves: pair_graves {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_GRAVES";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp GRAVE>, <&kp GRAVE>, <&kp LEFT_ARROW>;
+        };
+
+        pair_dquotes: pair_dquotes {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_DQUOTES";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp DOUBLE_QUOTES>, <&kp DOUBLE_QUOTES>, <&kp LEFT_ARROW>;
+        };
+
+        pair_squotes: pair_squotes {
+            compatible = "zmk,behavior-macro";
+            label = "PAIR_SQUOTES";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT_ARROW>;
         };
     };
 
@@ -60,13 +115,31 @@
             tap-ms = <20>;
         };
 
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+        encoder_zoom_out_in: encoder_zoom_out_in {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_ZOOM_OUT_IN";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LG(MINUS)>, <&kp LG(PLUS)>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tap-ms = <20>;
+        };
+
+        encoder_vol_down_up: encoder_vol_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_VOL_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
+
+            tap-ms = <20>;
+        };
+
+        encoder_msc_left_right: encoder_msc_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_LEFT_RIGHT";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+
+            tap-ms = <20>;
         };
     };
 
@@ -86,11 +159,13 @@
 
         SYMBOL {
             bindings = <
-&trans        &kp AMPERSAND    &kp ASTERISK  &kp NON_US_BACKSLASH  &trans                        &kp EQUAL       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp TILDE          &kp GRAVE
-&kp QUESTION  &kp DOLLAR       &kp PERCENT   &kp LCTRL             &kp PLUS  &trans      &trans  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp SQT
-&trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans    &trans      &trans  &kp PIPE        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN      &kp GREATER_THAN
+&trans        &kp AMPERSAND    &kp ASTERISK  &kp NON_US_BACKSLASH  &trans                        &kp EQUAL       &kp UNDERSCORE       &kp RIGHT_BRACKET  &kp TILDE          &kp GRAVE
+&kp QUESTION  &kp DOLLAR       &kp PERCENT   &kp LCTRL             &kp PLUS  &trans      &trans  &pair_brackets  &pair_parens         &pair_braces       &pair_dquotes      &pair_squotes
+&trans        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH              &trans    &trans      &trans  &kp PIPE        &pair_angles         &pair_graves       &kp LESS_THAN      &kp GREATER_THAN
 &trans        &trans           &trans        &trans                &trans    &trans      &trans  &trans                                                                          &trans
             >;
+
+            sensor-bindings = <&encoder_zoom_out_in>;
         };
 
         NUM {
@@ -100,6 +175,8 @@
 &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &trans  &trans  &kp LG(PLUS)  &kp LG(N0)      &kp LG(MINUS)  &kp END
 &trans        &trans        &trans        &trans        &trans  &trans      &trans  &trans                                               &trans
             >;
+
+            sensor-bindings = <&encoder_vol_down_up>;
         };
 
         SCROLL {
@@ -110,7 +187,7 @@
 &trans           &trans              &trans              &trans               &trans  &trans          &trans  &trans                                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&encoder_msc_left_right>;
         };
     };
 };
