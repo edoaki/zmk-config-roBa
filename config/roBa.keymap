@@ -77,8 +77,8 @@
             bindings = <
 &kp Q      &kp W         &kp E         &kp R      &kp T                                                  &kp Y                   &kp U     &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F      &kp G        &mkp MB2            &kp LG(LS(NUMBER_4))  &kp H                   &mkp MB1  &kp K      &kp L    &kp SEMICOLON
-&kp Z      &kp X         &kp C         &kp V      &kp B        &mkp MB1            &kp LANG2             &kp N                   &kp M     &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 TAB  &lt 1 SPACE  &mt LSHIFT F19      &lt 2 BACKSPACE       &mt LEFT_COMMAND ENTER                                &kp ESC
+&kp Z      &kp X         &kp C         &kp V      &kp B        &kp LCTRL           &kp LANG2             &kp N                   &kp M     &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 TAB  &lt 1 SPACE  &mt LSHIFT F19      &lt 2 BACKSPACE       &mt LEFT_COMMAND ENTER                                &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -97,19 +97,10 @@
 
         NUM {
             bindings = <
-&trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                                       &trans  &kp PAGE_UP   &kp UP_ARROW    &kp PAGE_DOWN  &trans
-&kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &kp LC(LA(KP_NUMBER_0))      &trans  &trans  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp HOME
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans                       &trans  &trans  &kp LG(PLUS)  &kp LG(N0)      &kp LG(MINUS)  &kp END
-&trans        &trans        &trans        &trans        &trans  &trans                       &trans  &trans                                               &trans
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans                &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &lt_to_layer_0 0 F17  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans                &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                            &trans
+&trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                      &trans  &kp PAGE_UP   &kp UP_ARROW    &kp PAGE_DOWN  &trans
+&kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans      &trans  &trans  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp HOME
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &trans  &trans  &kp LG(PLUS)  &kp LG(N0)      &kp LG(MINUS)  &kp END
+&trans        &trans        &trans        &trans        &trans  &trans      &trans  &trans                                               &trans
             >;
         };
 
