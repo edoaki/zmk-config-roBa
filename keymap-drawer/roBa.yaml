@@ -39,16 +39,16 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - {t: TAB, h: SCROLL}
-  - {t: SPACE, h: NUM}
+  - {t: SPACE, h: SYMBOL}
   - {t: F19, h: LSHIFT}
-  - {t: BACKSPACE, h: SYMBOL}
+  - {t: BACKSPACE, h: NUM}
   - {t: ENTER, h: LEFT COMMAND}
   - ESC
   SYMBOL:
   - {t: ▽, type: trans}
   - '&'
   - '*'
-  - NON US BACKSLASH
+  - \
   - {t: ▽, type: trans}
   - '='
   - _
@@ -62,11 +62,11 @@ layers:
   - +
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '[]'
-  - '()'
-  - '{}'
-  - '""'
-  - "''"
+  - '&pair_brackets'
+  - '&pair_parens'
+  - '&pair_braces'
+  - '&pair_dquotes'
+  - '&pair_squotes'
   - {t: ▽, type: trans}
   - '!'
   - '@'
@@ -75,17 +75,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '|'
-  - '<>'
-  - '``'
+  - '&pair_angles'
+  - '&pair_graves'
   - <
   - '>'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NUM:
@@ -127,9 +127,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SCROLL:
