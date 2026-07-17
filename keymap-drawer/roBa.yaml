@@ -17,7 +17,7 @@ layers:
   - F
   - G
   - F3
-  - Gui+Sft+4
+  - LEFT SHIFT
   - H
   - J
   - K
@@ -29,7 +29,7 @@ layers:
   - V
   - B
   - LCTRL
-  - ESC
+  - Gui+Ctl+F
   - N
   - M
   - ','
@@ -183,9 +183,9 @@ layers:
   - Sft+F3
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+Ctl+ENTER
+  - Gui+LEFT
   - Meh+UP ARROW
-  - {t: ▽, type: trans}
+  - Gui+RIGHT
   - {t: ▽, type: trans}
   - Ctl+Sft+TAB
   - Ctl+TAB
@@ -195,9 +195,9 @@ layers:
   - MUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+Alt+LEFT
+  - Ctl+Sft+TAB
   - Alt+Ctl+/
-  - Ctl+Alt+RIGHT
+  - Ctl+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -208,7 +208,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Alt+Ctl+C
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
