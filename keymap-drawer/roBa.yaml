@@ -178,19 +178,19 @@ layers:
   - {t: ▽, type: trans}
   SCROLL:
   - {t: ▽, type: trans}
-  - Ctl+DOWN ARROW
-  - Ctl+UP ARROW
-  - Sft+F3
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Gui+LEFT
   - Meh+UP ARROW
   - Gui+RIGHT
   - {t: ▽, type: trans}
-  - Ctl+Sft+TAB
-  - Ctl+TAB
-  - Gui+Sft+TAB
-  - Gui+TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - MUTE
   - {t: ▽, type: trans}
@@ -201,8 +201,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+LEFT ARROW
-  - Gui+RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
