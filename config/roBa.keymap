@@ -191,7 +191,7 @@
 &trans        &trans           &trans        &trans                &trans    &kp LEFT_SHIFT      &trans  &trans                                                                            &trans
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&encoder_msc_left_right>;
         };
 
         NUM {
@@ -202,7 +202,7 @@
 &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                               &trans
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&encoder_msc_left_right>;
         };
 
         MOUSE {
