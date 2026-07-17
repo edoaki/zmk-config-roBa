@@ -159,33 +159,6 @@
     };
 
     behaviors {
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-            tap-ms = <20>;
-        };
-
-        encoder_zoom_out_in: encoder_zoom_out_in {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_ZOOM_OUT_IN";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp LG(MINUS)>, <&kp LG(PLUS)>;
-
-            tap-ms = <20>;
-        };
-
-        encoder_vol_down_up: encoder_vol_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_VOL_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
-
-            tap-ms = <20>;
-        };
-
         encoder_msc_left_right: encoder_msc_left_right {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_LEFT_RIGHT";
@@ -201,13 +174,13 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R      &kp T                                                  &kp Y                   &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F      &kp G        &kp F3              &kp LG(LS(NUMBER_4))  &kp H                   &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C         &kp V      &kp B        &kp LCTRL           &kp ESC               &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 TAB  &lt 1 SPACE  &mt LSHIFT F19      &lt 2 BACKSPACE       &mt LEFT_COMMAND ENTER                             &kp SEMICOLON
+&kp Q      &kp W         &kp E         &kp R      &kp T                                             &kp Y                   &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F      &kp G        &kp F3              &kp LEFT_SHIFT   &kp H                   &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C         &kp V      &kp B        &kp LCTRL           &kp LG(LC(F))    &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 TAB  &lt 1 SPACE  &mt LSHIFT F19      &lt 2 BACKSPACE  &mt LEFT_COMMAND ENTER                             &kp SEMICOLON
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&none>;
         };
 
         SYMBOL {
@@ -218,7 +191,7 @@
 &trans        &trans           &trans        &trans                &trans    &kp LEFT_SHIFT      &trans  &trans                                                                            &trans
             >;
 
-            sensor-bindings = <&encoder_zoom_out_in>;
+            sensor-bindings = <&none>;
         };
 
         NUM {
@@ -229,7 +202,7 @@
 &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                               &trans
             >;
 
-            sensor-bindings = <&encoder_vol_down_up>;
+            sensor-bindings = <&none>;
         };
 
         MOUSE {
@@ -243,10 +216,10 @@
 
         SCROLL {
             bindings = <
-&trans           &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)    &kp LS(F3)           &trans                          &trans  &kp LA(LC(ENTER))  &kp LA(LC(LS(UP_ARROW)))  &trans             &trans
-&kp LC(LS(TAB))  &kp LC(TAB)         &kp LG(LS(TAB))     &kp LG(TAB)          &trans  &kp C_MUTE      &trans  &trans  &kp LC(LA(LEFT))   &kp LA(LC(SLASH))         &kp LC(LA(RIGHT))  &trans
-&trans           &trans              &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans          &trans  &trans  &trans             &kp LA(LC(C))             &trans             &trans
-&trans           &trans              &trans              &trans               &trans  &trans          &trans  &trans                                                                  &trans
+&trans           &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)    &kp LS(F3)           &trans                          &trans  &kp LG(LEFT)     &kp LA(LC(LS(UP_ARROW)))  &kp LG(RIGHT)  &trans
+&kp LC(LS(TAB))  &kp LC(TAB)         &kp LG(LS(TAB))     &kp LG(TAB)          &trans  &kp C_MUTE      &trans  &trans  &kp LC(LS(TAB))  &kp LA(LC(SLASH))         &kp LC(TAB)    &trans
+&trans           &trans              &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans          &trans  &trans  &trans           &trans                    &trans         &trans
+&trans           &trans              &trans              &trans               &trans  &trans          &trans  &trans                                                            &trans
             >;
 
             sensor-bindings = <&encoder_msc_left_right>;
