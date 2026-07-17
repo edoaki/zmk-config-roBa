@@ -159,11 +159,11 @@
     };
 
     behaviors {
-        encoder_msc_left_right: encoder_msc_left_right {
+        encoder_msc_up_down: encoder_msc_up_down {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_LEFT_RIGHT";
+            label = "ENCODER_MSC_UP_DOWN";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
         };
@@ -180,7 +180,7 @@
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 4 TAB  &lt 1 SPACE  &mt LSHIFT F19      &lt 2 BACKSPACE  &mt LEFT_COMMAND ENTER                             &kp SEMICOLON
             >;
 
-            sensor-bindings = <&encoder_msc_left_right>;
+            sensor-bindings = <&encoder_msc_up_down>;
         };
 
         SYMBOL {
@@ -191,7 +191,7 @@
 &trans        &trans           &trans        &trans                &trans    &kp LEFT_SHIFT      &trans  &trans                                                                            &trans
             >;
 
-            sensor-bindings = <&encoder_msc_left_right>;
+            sensor-bindings = <&encoder_msc_up_down>;
         };
 
         NUM {
@@ -202,7 +202,7 @@
 &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans                                               &trans
             >;
 
-            sensor-bindings = <&encoder_msc_left_right>;
+            sensor-bindings = <&encoder_msc_up_down>;
         };
 
         MOUSE {
@@ -222,7 +222,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans                                                            &trans
             >;
 
-            sensor-bindings = <&encoder_msc_left_right>;
+            sensor-bindings = <&encoder_msc_up_down>;
         };
     };
 };
