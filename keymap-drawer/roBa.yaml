@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - '&mkp MB2'
+  - F3
   - Gui+Sft+4
   - H
   - J
@@ -54,7 +54,7 @@ layers:
   - _
   - '~'
   - '`'
-  - {t: ▽, type: trans}
+  - '|'
   - '?'
   - $
   - '%'
@@ -62,11 +62,11 @@ layers:
   - +
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&pair_brackets'
-  - '&pair_parens'
-  - '&pair_braces'
-  - '&pair_dquotes'
-  - '&pair_squotes'
+  - '"'
+  - (
+  - )
+  - '['
+  - ']'
   - {t: ▽, type: trans}
   - '!'
   - '@'
@@ -74,17 +74,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '|'
-  - '&pair_angles'
-  - '&pair_graves'
-  - <
-  - '>'
+  - ''''
+  - '{'
+  - '}'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - LEFT SHIFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -103,7 +103,7 @@ layers:
   - '4'
   - '5'
   - '6'
-  - {t: ▽, type: trans}
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -220,3 +220,29 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [18, 19]
+  k: '&pair_parens'
+  l: [SYMBOL]
+- p: [20, 21]
+  k: '&pair_brackets'
+  l: [SYMBOL]
+- p: [30, 31]
+  k: '&pair_braces'
+  l: [SYMBOL]
+- p: [32, 33]
+  k: '&pair_angles'
+  l: [SYMBOL]
+- p: [7, 8]
+  k: '&pair_graves'
+  l: [SYMBOL]
+- p: [17, 18]
+  k: '&pair_dquotes'
+  l: [SYMBOL]
+- p: [29, 30]
+  k: '&pair_squotes'
+- p: [18, 19]
+  k: J
+  l: [default]
+- p: [19, 20]
+  k: L
