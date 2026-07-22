@@ -17,7 +17,7 @@ layers:
   - F
   - G
   - Ctl+UP ARROW
-  - LEFT SHIFT
+  - Gui+Ctl+F
   - H
   - J
   - K
@@ -28,8 +28,8 @@ layers:
   - C
   - V
   - B
-  - LCTRL
-  - Gui+Ctl+F
+  - Ctl+LEFT ARROW
+  - Ctl+RIGHT ARROW
   - N
   - M
   - ','
